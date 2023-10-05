@@ -1,0 +1,196 @@
+@use 'variables';
+
+.hero{
+    padding: 3.5vw;
+    width: 100%;
+    text-align: center;
+    color: variables.$primaryColor;
+    
+
+    &__content{
+        display: block;
+        min-height: 100vh;
+        overflow-x: hidden;
+        padding: 0 calc(3.5vw + 24px);
+        position: relative;
+        padding-right: 48px;
+        padding-left: 48px;
+
+        @media (max-width: 768px){
+            padding: 20px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            min-height: 30vh;
+        }
+        
+        &__img{
+            display: flex;
+            max-width: 341px;
+            width: 35vw;
+            justify-content: flex-start;
+            padding-top: 56px;
+            padding-bottom: 16px;  
+
+            @media (max-width: 768px){
+                display: block;
+                margin: 0 auto;
+            }
+
+            @media (min-width: 769px) and (max-width:1024px){
+                padding-top: 0;
+            }
+        }
+
+        &__specifications{  
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: left;
+            align-items: center;
+
+            p{
+                @media (max-width: 768px){
+                    text-align: center;
+                }
+            }
+
+
+            img{
+                height: 20px;
+                margin: 0 4px 0 0;
+            }
+
+            &__time{
+                display: flex;
+                
+                @media (max-width: 768px){
+                    justify-content: center;
+                }
+            }
+
+            &__type{
+                display: block;
+                margin-top: 5px;
+
+                @media (max-width: 768px){
+                    justify-content: center;
+                }
+            }
+        }
+
+        &__text{
+            font-size: 20px;
+            display: block;
+            text-align: left;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            line-height: 1.6;
+            max-width: 850px;
+
+            @media (max-width: 768px){
+                justify-content: justify;
+            }
+        }
+
+        &__buttons{
+            align-items: center;
+            display: flex;
+            flex-flow: wrap;
+            margin-top: 32px;
+
+            @media (max-width: 768px){
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 0 8px;
+                margin-bottom: 12px;
+                justify-content: space-between;
+            }
+
+            &--play{
+                background-color: variables.$primaryColor;
+                color: variables.$backgroundColor;
+                border: 2px solid variables.$primaryColor;
+                align-items: center;
+                padding: 0 1rem;
+                border-radius: .25rem;
+                height: 56px;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                line-height: 1.6px;
+                margin: 4px 8px 4px 0;
+                cursor: pointer;
+
+                @media (max-width: 768px){
+                    display: flex;
+                    flex-wrap: nowrap;
+                    height: 40px;
+                    padding: 0 8px;
+                    margin-bottom: 12px;
+                }
+
+                &:hover{
+                    background-color: variables.$secondaryColor;
+                    border: 2px solid variables.$secondaryColor;
+                }
+            }
+
+            &--trailer{
+                background-color: variables.$backgroundColor;
+                color: variables.$primaryColor;
+                border: 2px solid variables.$primaryColor;
+                align-items: center;
+                padding: 0 1rem;
+                border-radius: .25rem;
+                height: 56px;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                line-height: 1.6px;
+                margin: 4px 8px;
+                cursor: pointer;
+
+                @media (max-width: 768px){
+                    height: 40px;
+                    padding: 0 8px;
+                    margin-bottom: 12px;
+                }
+                
+                &:hover{
+                    background-color: variables.$secondaryColor;
+                    border: 2px solid variables.$secondaryColor;
+                    color: variables.$backgroundColor;
+                }
+                
+            }
+
+            &--plus{
+                background-color: variables.$backgroundColor;
+                color: variables.$primaryColor;
+                border: 2px solid variables.$primaryColor;
+                align-items: center;
+                padding: 0 1rem;
+                border-radius: 100%;
+                height: 46px;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                line-height: 1.6px;
+                margin: 4px 8px;
+                cursor: pointer;
+
+                @media (max-width: 768px){
+                    height: 40px;
+                    padding: 0 8px;
+                    margin-bottom: 12px;
+                }
+
+                &:hover{
+                    background-color: variables.$secondaryColor;
+                    border: 2px solid variables.$secondaryColor;
+                    color: variables.$backgroundColor;
+                }
+            }
+        }
+    }
+}

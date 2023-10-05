@@ -1,0 +1,96 @@
+@use 'variables';
+
+.header{
+
+    .navbar{
+        background-color: rgba($color: variables.$backgroundColor, $alpha: 0);
+        transition: background-color .5s ease-out;
+        position: sticky;
+
+        &--is-hidden{
+            background-color: rgba($color: variables.$backgroundColor, $alpha: 1);
+            transition: background-color .5s ease-in;
+        }
+
+        &-toggler{
+            @media (max-width: 768px){
+                background-color: transparent;
+                color: transparent;
+                border: none;
+                background-color: variables.$secondaryColor;
+            }
+            @media (min-width: 768px) and (max-width: 1024px){
+                background-color: transparent;
+                color: transparent;
+                border: none;
+                background-color: variables.$secondaryColor;
+            }
+
+        }
+
+}
+
+    &__container{
+        display: flex;
+        padding: 8px 36px;
+        align-items: center;
+
+        @media (max-width: 768px){
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            background-color: rgba($color: variables.$backgroundColor, $alpha: 0.6);
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            background-color: rgba($color: variables.$backgroundColor, $alpha: 0.6);
+        }
+
+        img{
+            max-width: 80px;
+        }
+
+        &__nav__list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            @media (max-width:768px) {
+                display: block;
+            }
+            @media (min-width:769px) and (max-width:1024px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .nav-item{
+                margin-left: 30px;
+            }
+
+            .nav-link{
+                padding-left: 8px;
+
+                &:hover{
+                    border-bottom: 2px solid variables.$primaryColor;
+                    border-radius: 0;
+                }
+            }
+
+            .nav-item,
+            .nav-link{
+                color: variables.$primaryColor;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

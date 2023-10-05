@@ -1,0 +1,49 @@
+@use 'variables';
+
+.footer{
+    display: block;
+    padding: 3.5vw;
+    width: 100%;
+
+    @media (max-width: 768px){
+        width: 100%;
+    }
+
+    span{
+        color: variables.$secondaryColor;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    img{
+        display: block;
+        max-width: 94px;
+        margin: 0 auto;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px){
+            padding-left: 0;
+        }
+
+        &__item{
+            margin: 11px 5px 10px;
+
+            &__link{
+                text-decoration: none;
+                padding: 1px 6px;
+                color: variables.$primaryColor;
+                font-size: 12px;
+            }
+        }
+    }
+}
